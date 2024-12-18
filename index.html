@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIA</title>
+    <!-- Favicons -->
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <meta name="theme-color" content="#1e1e1e">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <span class="logo-v">V</span><span class="logo-ia">IA</span>
+            </h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-phrases">
+                    <div class="phrase-container">
+                        <h2 class="animated-phrase">¿Sentís la llamada del viaje?</h2>
+                        <h2 class="animated-phrase">¿Imaginás nuevos horizontes?</h2>
+                        <h2 class="animated-phrase">¿Anhelás vivir la aventura?</h2>
+                        <h2 class="animated-phrase">Tu destino espera... <span class="logo-text"><span class="logo-v">V</span><span class="logo-ia">IA</span></span> te guía</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-area">
+                <span class="scroll-text">Deslizate hacia abajo</span>
+                <div class="scroll-indicator">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 5v14"></path>
+                        <path d="m19 12-7 7-7-7"></path>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature-cards">
+                    <div class="card">
+                        <img src="img/destinos_populares.jpg" alt="Destinos Populares" class="card-image">
+                        <div class="card-content">
+                            <h3>Destinos Populares</h3>
+                            <p>Lugares más visitados o recomendados por la mayoría de las personas.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/escapadas_relajantes.jpg" alt="Escapadas Relajantes" class="card-image">
+                        <div class="card-content">
+                            <h3>Escapadas Relajantes</h3>
+                            <p>Lugares tranquilos, culturales y de aventura.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/lugares_imperdibles.png" alt="Lugares Imperdibles" class="card-image">
+                        <div class="card-content">
+                            <h3>Lugares Imperdibles</h3>
+                            <p>Destinos que no te puedes perder, considerando tus preferencias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recommendation-section">
+            <div class="container">
+                <h2 class="section-title">¡Embarcate en tu Próxima Aventura!</h2>
+                <div class="recommendation-content">
+                    <div class="form-container centered">
+                        <form id="recommendationForm">
+                            <select id="region" name="region" required>
+                                <option value="">Selecciona una región</option>
+                                <option value="Norteamerica">Norteamérica</option>
+                                <option value="Centroamerica">Centroamérica</option>
+                                <option value="America Insular">América Insular</option>
+                                <option value="America del Sur">América del Sur</option>
+                                <option value="Europa">Europa</option>
+                                <option value="Asia">Asia</option>
+                                <option value="Africa">África</option>
+                                <option value="Oceania">Oceanía</option>
+                            </select>
+                            <select id="pais" name="pais" required>
+                                <option value="">Selecciona un país</option>
+                            </select>
+                            <select id="ciudad" name="ciudad" required>
+                                <option value="">Selecciona una ciudad</option>
+                            </select>
+                            <select id="tipoTurismo" name="tipoTurismo" required>
+                                <option value="">Selecciona tipo de turismo</option>
+                                <option value="Relajación">Relajación</option>
+                                <option value="Aventura">Aventura</option>
+                                <option value="Cultural">Cultural</option>
+                                <option value="Histórico">Histórico</option>
+                                <option value="Espiritual">Espiritual</option>
+                                <option value="Gastronómico">Gastronómico</option>
+                                <option value="Entretenimiento">Entretenimiento</option>
+                            </select>
+                            <input type="number" id="presupuesto" name="presupuesto" placeholder="Presupuesto Individual ($)" required>
+                            <button type="submit">Encontrar Destinos</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="recomendaciones" class="recommendations-container">
+                    <!-- Las recomendaciones se generarán dinámicamente aquí -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Copyright © <span id="currentYear"></span> <span class="footer-via">VIA</span><span class="footer-dot">.</span><br>
+            Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
